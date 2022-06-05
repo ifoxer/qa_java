@@ -16,19 +16,18 @@ public class LionTest {
     Lion lion;
 
     @Mock
-    private Feline feline;
+    //private Feline feline;
+    private Predator predator;
 
     @Before
     public void setUp() {
-        lion = new Lion(feline);
+        lion = new Lion(predator);
     }
 
     @Test
     public void getKittensTest() {
         int expected = 1;
-        when(feline.getKittens()).thenReturn(1);
         int actual = lion.getKittens();
-
         assertEquals(expected,actual);
     }
 
@@ -40,10 +39,11 @@ public class LionTest {
         assertEquals(isExpected, isActual);
     }
 
+
     @Test
     public void testGetFood() throws Exception {
         List<String> expected = List.of("мясо", "птица", "рыба");
-        when(feline.eatMeat()).thenReturn(expected);
+        when(predator.eatMeat()).thenReturn(expected);
         List<String> actual = lion.getFood();
 
         assertEquals(expected, actual);
