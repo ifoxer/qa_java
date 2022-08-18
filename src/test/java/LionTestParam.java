@@ -19,7 +19,7 @@ public class LionTestParam {
     public static Object[][] getData() {
         return new Object[][]{
                 {"Самец", true},
-                {"Самка", false}
+                {"Самка", false},
         };
     }
 

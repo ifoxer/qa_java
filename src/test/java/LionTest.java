@@ -32,5 +32,15 @@ public class LionTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testHasManeElse() throws Exception {
+        try {
+            Lion lion = new Lion("test");
+            lion.doesHaveMane();
+        }catch (Exception e){
+            Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
+        }
+    }
+
 
 }
