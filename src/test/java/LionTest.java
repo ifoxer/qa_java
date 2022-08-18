@@ -1,7 +1,6 @@
 import com.example.Feline;
 import com.example.Kittens;
 import com.example.Lion;
-import com.example.Predator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
