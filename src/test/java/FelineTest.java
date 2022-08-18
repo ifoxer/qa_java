@@ -55,5 +55,19 @@ public class FelineTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testGetFamily(){
+        Feline feline = new Feline();
+        String actual = feline.getFamily();
+        String expected = "Кошачьи";
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetFamilyVerify(){
+        feline.getFamily();
+        Mockito.verify(feline).getFamily();
+    }
+
 
 }
